@@ -1,4 +1,4 @@
-🐱 Project_CNN_Klasifikasi_Kucing_Catsify-App
+<h1>🐱 Project_CNN_Klasifikasi_Kucing_Catsify-App</h1>
 
 Catsify-App adalah sebuah aplikasi berbasis CNN (Convolutional Neural Network) yang mampu mengklasifikasikan 11 ras kucing menggunakan model deep learning yang telah dilatih dengan MobileNetV3 Large dan dioptimalkan dengan Transfer Learning.
 
@@ -6,38 +6,23 @@ Catsify-App adalah sebuah aplikasi berbasis CNN (Convolutional Neural Network) y
 
 Aplikasi ini dapat mengenali 12 jenis ras kucing, yaitu:
 
-Abyssinian
-
-Bengal
-
-Birman
-
-Bombay
-
-British Shorthair
-
-Egyptian Mau
-
-Maine Coon
-
-Persian
-
-Ragdoll
-
-Russian Blue
-
-Siamese
-
-Sphynx
+<ul>- Abyssinian</ul>
+<ul>- Bengal</ul>
+<ul>- Birman</ul>
+<ul>- Bombay</ul>
+<ul>- British Shorthair</ul>
+<ul>- Egyptian Mau</ul>
+<ul>- Maine Coon</ul>
+<ul>- Persian</ul>
+<ul>- Ragdoll</ul>
+<ul>- Russian Blue</ul>
+<ul>- Siamese</ul>
+<ul>- Sphynx</ul>
 
 🔍 Teknologi yang Digunakan
 
-Python
-
-TensorFlow & Keras (Deep Learning Framework)
-
-OpenCV & PIL (Image Processing)
-
-MobileNetV3 Large (Pre-trained Model)
-
-Transfer Learning (Fine-tuning untuk klasifikasi spesifik)
+<ul>- Python</ul>
+<ul>- TensorFlow & Keras (Deep Learning Framework)</ul>
+<ul>- OpenCV & PIL (Image Processing)</ul>
+<ul>- MobileNetV3 Large (Pre-trained Model)</ul>
+<ul>- Transfer Learning (Fine-tuning untuk klasifikasi spesifik)</ul>
