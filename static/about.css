@@ -1,0 +1,245 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Concert+One&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Concert One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  
+  }
+
+body {
+    margin: 0px;
+}
+
+.navigasi_utama {
+    background-color: #9ADCFF;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 20;
+}
+
+.kontener{
+    display: flex;
+}
+
+.sub_menu_utama{
+    /* background-color: red; */
+    width: 80%;
+    height: 50px;
+}
+
+.pembungkus_sub_menu{
+    width: 75%;
+    justify-content: center;
+    height: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+}
+
+.submenu1{
+    width: fit-content;
+    height: fit-content;
+    background-color:#FDC508 ;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    padding: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+}
+
+#klasif_kucing{
+    margin-top: 10px;
+    width: 100%;
+    height:750px;
+    /* background-color:#FDC508; */
+}
+
+.kontainer-klasif{
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.baris-foto{
+    display: flex;
+    width: 100%;
+    height: 230px;
+    justify-content: space-between;
+    /* background-color: rgb(213, 228, 228); */
+}
+
+.selfoto{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.selfoto-tulisan{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #567AFB;
+    font-size: large;
+    font-weight: bold;
+}
+
+.foto-kucing img{
+    width: 90%;
+    height: 180px;
+    box-shadow: 8px 8px 8px lightblue;
+    border-radius: 7px;
+      
+}
+
+#identitas_pembuat{
+    margin-top: 110px;
+    width: 100%;
+    height:auto;
+    /* background-color:#FDC508; */
+}
+
+.kontainer-identitas{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+.judul_about{
+    color: #567AFB;
+    text-align: center;
+}
+
+.foto_identitas{
+    width: 60%;
+}
+
+.tentang_website{
+    margin-top: 30px;
+    width: 60%;
+    text-align: center;
+}
+
+
+/* handphone */
+.navigasi_utama_handphone{
+    background-color: #9ADCFF;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 20;
+}
+
+.kontener_handphone{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* background-color: #ffe896; */
+}
+
+.icon_gambar{
+    /* background-color: #625f56; */
+}
+
+.sub_menu_utama_hp{
+    /* background-color: #625f56; */
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.submenu1_hp{
+    width: fit-content;
+    height: fit-content;
+    background-color:#FDC508 ;
+    align-items: center;
+    justify-content: center;
+    /* align-content: center; */
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+}
+
+.kontainer-klasif_hp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+}
+
+.konten_hp{
+    padding: 5px;
+    width: 98%;
+    background-color: #FEDA94;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-radius: 100px;
+    margin-bottom: 5px;
+}
+
+.tulisan_klasif_hp{
+    font-size: 20px;
+    font-weight: bold;
+    color: #567AFB;
+    width: 80%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.foto_kucing_hp{
+    height: 62px;
+    width: 63px ;
+    border-radius: 100%;
+    margin-right: 15px;
+}
+
+
+#identitas_pembuat_handphone{
+    margin-top: 110px;
+    width: 100%;
+    height:auto;
+    /* background-color: #567AFB; */
+    /* background-color:#FDC508; */
+}
+
+.kontainer-identitas_handphone{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+.judul_about_handphone{
+    color: #567AFB;
+    text-align: center;
+}
+
+.foto_identitas_handphone{
+    width: 100%;
+}
+
+.tentang_website_handphone{
+    margin-top: 30px;
+    width: 60%;
+    text-align: center;
+}
+

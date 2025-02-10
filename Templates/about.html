@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Image Classification</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="../static/about.css">
+</head>
+<body>
+
+ 
+  <nav class="navbar navigasi_utama d-none d-lg-block">
+    <div class="kontener container-xxl">
+      <div class="icon gambar">
+      <a href="#">
+        <img src="{{ url_for('static', filename='PET.png')}}" alt="petgambar" width="150px" height="70px">
+      </a>
+    </div>
+    <div class="sub_menu_utama">
+      <div class="pembungkus_sub_menu">
+        <div class="submenu1" > <a href="{{ url_for('main') }}">HOME</a></div>
+        <div class="submenu1"><a href="{{ url_for('about_page') }}">ABOUT</a></div>
+      </div>
+    </div>
+    </div>
+  </nav>
+
+
+
+  <nav class="navbar navigasi_utama_handphone d-lg-none">
+    <div class="kontener_handphone container-lg">
+      <div class="icon_gambar">
+      <a href="#">
+        <img src="{{ url_for('static', filename='PET.png')}}" alt="petgambar" width="150px" height="70px">
+      </a>
+    </div>
+    <div class="sub_menu_utama_hp">
+      
+        <div class="submenu1_hp"> <a href="{{ url_for('main') }}">HOME</a></div>
+        <div class="submenu1_hp"><a href="{{ url_for('about_page') }}">ABOUT</a></div>
+ 
+    </div>
+  
+  
+    </div>
+  </nav>
+
+  </div>
+ 
+  <section id="identitas_pembuat" class="d-none d-lg-block">
+    <div class="kontainer-identitas container-xxl">
+      <h2 class="judul_about">SELAMAT DATANG DI WEBSITE CATSIFY</h2>
+      <img class="foto_identitas" src="../static/Aset_Foto/identitas.png" alt="">
+      <h2 class="judul_about">Tentang Website</h2>
+      <p class="tentang_website">Website ini menerapkan model machine learning dengan fungsi mengklasifikasikan input berupa gambar kucing ke jenis ras kucing dengan probabilitas tertinggi. Akurasi model yang dipakai pada website ini ialah 87%. Website ini dibuat 
+        untuk menyelesaikan tugas akhir pembuat berupa penulisan ilmiah Jurusan Informatika Fakultas Teknologi Industri Universitas Guadarma.
+      </p>
+    </div>
+  </section>
+
+    <section id="identitas_pembuat_handphone" class="d-lg-none">
+      <div class="kontainer-identitas_handphone  container-xxl">
+        <h2 class="judul_about_handphone">SELAMAT DATANG DI WEBSITE CATSIFY</h2>
+        <img class="foto_identitas_handphone" src="../static/Aset_Foto/identitas.png" alt="">
+        <h2 class="judul_about_handphone">Tentang Website</h2>
+        <p class="tentang_website_handphone">Website ini menerapkan model machine learning dengan fungsi mengklasifikasikan input berupa gambar kucing ke jenis ras kucing dengan probabilitas tertinggi. Akurasi model yang dipakai pada website ini ialah 87%. Website ini dibuat 
+          untuk menyelesaikan tugas akhir pembuat berupa penulisan ilmiah Jurusan Informatika Fakultas Teknologi Industri Universitas Guadarma.
+        </p>
+      </div>
+
+  </section>
+  <section id="klasif_kucing" class="d-none d-lg-block">
+    <div class="kontainer-klasif container-xxl">
+    <div class="baris-foto ">
+      <div class="selfoto col-2">
+        <div class="foto-kucing">
+          <img src="../static/Aset_Foto/Abyssinian_45.jpg" alt="">
+        </div>
+        <div class="keterangan-kucing">Abyssinian</div>
+      </div>
+
+      <div class="selfoto-tulisan col-8">
+        Daftar ras kucing yang dapat diklasifikasi
+      </div>
+
+      <div class="selfoto col-2">
+        <div class="foto-kucing">
+          <img src="../static/Aset_Foto/Bengal_4.jpg" alt="">
+        </div>
+        <div class="keterangan-kucing">Bengal</div>
+      </div>
+    </div>
+
+    <div class="baris-foto">
+      <div class="selfoto col-2">
+        <div class="foto-kucing">
+          <img src="../static/Aset_Foto/Birman_123.jpg" alt="">
+        </div>
+        <div class="keterangan-kucing">Birman</div>
+      </div>
+
+      <div class="selfoto col-2">
+        <div class="foto-kucing">
+          <img src="../static/Aset_Foto/Bombay_45.jpg" alt="">
+        </div>
+        <div class="keterangan-kucing">Bombay</div>
+      </div>
+
+      <div class="selfoto col-2">
+        <div class="foto-kucing">
+          <img src="../static/Aset_Foto/British_Shorthair_2.jpg" alt="">
+        </div>
+        <div class="keterangan-kucing">British Shorthair</div>
+      </div>
+
+      <div class="selfoto col-2">
+        <div class="foto-kucing">
+          <img src="../static/Aset_Foto/Egyptian_Mau_8.jpg" alt="">
+        </div>
+        <div class="keterangan-kucing">Egyptian Mau</div>
+      </div>
+
+      <div class="selfoto col-2">
+        <div class="foto-kucing">
+          <img src="../static/Aset_Foto/Maine_Coon_55.jpg" alt="">
+        </div>
+        <div class="keterangan-kucing">Maine_coon</div>
+      </div>
+
+
+    </div>
+    <div class="baris-foto" >
+      
+      <div class="selfoto col-2">
+        <div class="foto-kucing">
+          <img src="../static/Aset_Foto/Persian_3.jpg" alt="">
+        </div>
+        <div class="keterangan-kucing">Persian</div>
+      </div>
+
+      <div class="selfoto col-2">
+        <div class="foto-kucing">
+          <img src="../static/Aset_Foto/Ragdoll_5.jpg" alt="">
+        </div>
+        <div class="keterangan-kucing">Ragdoll</div>
+      </div>
+
+
+      <div class="selfoto col-2">
+        <div class="foto-kucing">
+          <img src="../static/Aset_Foto/Russian_Blue_54.jpg" alt="">
+        </div>
+        <div class="keterangan-kucing">Russian Blue</div>
+      </div>
+
+
+      <div class="selfoto col-2">
+        <div class="foto-kucing">
+          <img src="../static/Aset_Foto/Siamese_34.jpg" alt="">
+        </div>
+        <div class="keterangan-kucing">Siamese</div>
+      </div>
+
+
+      <div class="selfoto col-2">
+        <div class="foto-kucing">
+          <img src="../static/Aset_Foto/Sphynx_166.jpg" alt="">
+        </div>
+        <div class="keterangan-kucing">Sphynx</div>
+      </div>
+
+
+    </div>
+  </div>
+  </section>
+
+
+  <section id="klasif_kucing" class="d-lg-none">
+    <div class="kontainer-klasif_hp container-lg">
+      <div class="tulisan_klasif_hp">
+        Daftar ras kucing yang dapat diklasifikasi
+      </div>
+      <div class="konten_hp">
+        <img class="foto_kucing_hp" src="../static/Aset_Foto/Abyssinian_45.jpg" alt="">
+        <h2>Abyssinian</h2>
+      </div>
+      <div class="konten_hp">
+        <img class="foto_kucing_hp" src="../static/Aset_Foto/Bengal_4.jpg" alt="">
+        <h2>Bengal</h2>
+      </div>
+      <div class="konten_hp">
+        <img class="foto_kucing_hp" src="../static/Aset_Foto/Birman_123.jpg" alt="">
+        <h2>Birman</h2>
+      </div>
+      <div class="konten_hp">
+        <img class="foto_kucing_hp" src="../static/Aset_Foto/Bombay_45.jpg" alt="">
+        <h2>Bombay</h2>
+      </div>
+      <div class="konten_hp">
+        <img class="foto_kucing_hp" src="../static/Aset_Foto/British_Shorthair_2.jpg" alt="">
+        <h2>British Shorthair</h2>
+      </div>
+      <div class="konten_hp">
+        <img class="foto_kucing_hp" src="../static/Aset_Foto/Egyptian_Mau_8.jpg" alt="">
+        <h2>Egyptian Mau</h2>
+      </div>
+      <div class="konten_hp">
+        <img class="foto_kucing_hp" src="../static/Aset_Foto/Maine_Coon_55.jpg" alt="">
+        <h2>Maine Coon</h2>
+      </div>
+
+      <div class="konten_hp">
+        <img class="foto_kucing_hp" src="../static/Aset_Foto/Persian_3.jpg" alt="">
+        <h2>Persian</h2>
+      </div>
+      <div class="konten_hp">
+        <img class="foto_kucing_hp" src="../static/Aset_Foto/Ragdoll_5.jpg" alt="">
+        <h2>Ragdoll</h2>
+      </div>
+      <div class="konten_hp">
+        <img class="foto_kucing_hp" src="../static/Aset_Foto/Russian_Blue_54.jpg" alt="">
+        <h2>Russian Blue</h2>
+      </div>
+      <div class="konten_hp">
+        <img class="foto_kucing_hp" src="../static/Aset_Foto/Siamese_34.jpg" alt="">
+        <h2>Siamese</h2>
+      </div>
+      <div class="konten_hp">
+        <img class="foto_kucing_hp" src="../static/Aset_Foto/Sphynx_166.jpg" alt="">
+        <h2>Sphynx</h2>
+      </div>
+      
+      </div>
+    </section>
+
+
+ 
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script src="../static/index.js"></script>
+
+</body>
+</html>
+
+

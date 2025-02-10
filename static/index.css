@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Concert+One&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Concert One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  
+  }
+
+body {
+    margin: 0px;
+}
+
+.navigasi_utama {
+    background-color: #9ADCFF;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 20;
+}
+
+.kontener{
+    display: flex;
+}
+
+.sub_menu_utama{
+    /* background-color: red; */
+    width: 80%;
+    height: 50px;
+}
+
+.pembungkus_sub_menu{
+    width: 75%;
+    justify-content: center;
+    height: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+}
+
+.submenu1{
+    width: fit-content;
+    height: fit-content;
+    background-color:#FDC508 ;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    padding: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+}
+
+#halaman_utama {
+    /* background-color: #FDC508; */
+    margin-top: 50px;
+    width:100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+}
+
+.halaman_utama_bagian_kiri{
+    /* background-color: red; */
+    width: 50%;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+}
+
+.text{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 100px;
+    width: 50%;
+    height: 50%;
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.judul{
+    font-size: 40px;
+    color: #3054D3;
+    font-weight: bold;
+    text-align: left;
+}
+
+.subjudul{
+    font-size: 15px;
+    color: #3054D3;
+    text-align: left;
+}
+
+.button_cek_ras{
+    width: 100%;
+    background-color: #567AFB;
+    height: fit-content;
+    align-self: center;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+
+}
+
+.halaman_utama_bagian_kanan{
+    /* background-color: red; */
+    width: 50%;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tempat_foto{
+    height: 70%;
+    width: 70%;
+    /* background-color: #FDC508; */
+    display: flex;
+    justify-content: center;
+
+}
+
+.foto_kartun_utama{
+    height: 88%;
+    width: auto;
+}
+
+#page_klarif{
+    width: 100%;
+    height: 700px;
+    background-color: #9ADCFF;
+    position: absolute;
+    z-index: 10;
+    margin-top: -50px;
+    border-radius: 10px 10px 0px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.kotak_upload{
+    margin-top: 100px;
+    background-color: aliceblue;
+    width: 50%;
+    height: 60%;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form_upload{
+    /* background-color: azure; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tulisanupload{
+    /* background-color: #FDC508; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+    font-size: 25px;
+    font-weight: bold;
+    width: 100%;
+    color: #567AFB;
+}
+
+.tempat_form_upload{
+    background-color: rgb(247, 247, 247);
+    height: 280px;
+    background-image: url('../static/Aset_Foto/upload.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100px ;
+}
+.tulisan_submit{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.button_submit{
+    background-color: #567AFB;
+    width: 100%;
+    border: 0px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+/* handphone */
+.navigasi_utama_handphone{
+    background-color: #9ADCFF;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 20;
+}
+
+.kontener_handphone{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* background-color: #ffe896; */
+}
+
+.icon_gambar{
+    /* background-color: #625f56; */
+}
+
+.sub_menu_utama_hp{
+    /* background-color: #625f56; */
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.submenu1_hp{
+    width: fit-content;
+    height: fit-content;
+    background-color:#FDC508 ;
+    align-items: center;
+    justify-content: center;
+    /* align-content: center; */
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+}
+
+
+#halaman_utama_handphone {
+        /* background-color: #FDC508; */
+        margin-top: 90px;
+        width:100%;
+        height: fit-content;
+        display: flex;
+        justify-content: space-between;
+}
+
+
+.text_hp{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+    height: 100%;
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+ .judul_hp{
+    font-size: 38px;
+    color: #3054D3;
+    font-weight: bold;
+    text-align: center;
+}
+
+.subjudul_hp{
+    width: 70%;
+    font-size: 15px;
+    color: #3054D3;
+    text-align: center;
+}
+
+.a_button_hp{
+    width: 85%;
+}
+
+.button_cek_ras_hp{
+    width:100%;
+    background-color: #567AFB;
+    height: fit-content;
+    align-self: center;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+
+} 
+
+
+#page_klarif_hp{
+    width: 100%;
+    height: 600px;
+    background-color: #9ADCFF;
+    position: absolute;
+    z-index: 10;
+    margin-top: -10px;
+    border-radius: 20px 20px 0px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.kotak_upload_hp{
+    margin-top: 100px;
+    background-color: aliceblue;
+    width: 80%;
+    height: 55%;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form_upload_hp{
+    /* background-color: azure; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.tulisanupload_hp{
+    /* background-color: #FDC508; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    font-size: 25px;
+    font-weight: bold;
+    width: 100%;
+    color: #567AFB;
+}
+
+
+.tempat_form_upload_hp{
+    background-color: rgb(247, 247, 247);
+    height: 180px;
+    background-image: url('../static/Aset_Foto/upload.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100px ;
+}
+
+.tulisan_submit_hp{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+.button_submit_hp{
+    background-color: #567AFB;
+    width: 100%;
+    border: 0px;
+    padding: 5px;
+    border-radius: 5px;
+}

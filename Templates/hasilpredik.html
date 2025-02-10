@@ -1,0 +1,750 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Image Classification</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="../static/hasil.css">
+</head>
+<body>
+
+ 
+  <nav class="navbar navigasi_utama d-none d-lg-block">
+    <div class="kontener container-xxl">
+      <div class="icon gambar">
+      <a href="#">
+        <img src="{{ url_for('static', filename='PET.png')}}" alt="petgambar" width="150px" height="70px">
+      </a>
+    </div>
+    <div class="sub_menu_utama">
+      <div class="pembungkus_sub_menu">
+        <div class="submenu1" > <a href="{{ url_for('main') }}">HOME</a></div>
+        <div class="submenu1"><a href="{{ url_for('about_page') }}">ABOUT</a></div>
+      </div>
+    </div>
+    </div>
+  </nav>
+
+
+
+  <nav class="navbar navigasi_utama_handphone d-lg-none">
+    <div class="kontener_handphone container-lg">
+      <div class="icon_gambar">
+      <a href="#">
+        <img src="{{ url_for('static', filename='PET.png')}}" alt="petgambar" width="150px" height="70px">
+      </a>
+    </div>
+    <div class="sub_menu_utama_hp">
+      
+        <div class="submenu1_hp"> <a href="{{ url_for('main') }}">HOME</a></div>
+        <div class="submenu1_hp"><a href="{{ url_for('about_page') }}">ABOUT</a></div>
+ 
+    </div>
+  
+  
+    </div>
+  </nav>
+<!-- 
+  <img id="picture" src="data:image/jpeg;base64,{{ img_data }}">
+  <p>{{ predict }}</p> -->
+
+  {% if(prediction == "Abyssinian") %}
+  <section class="hasil d-none d-lg-block">
+    <div class="container-xxl kotak_hasil">
+        <div class="kotak_kotak_hasil">
+        <div class="isi">
+            <img src="data:image/jpeg;base64,{{ img_data }}" height="400px" width="400px">
+        </div>
+        <div class="isi">
+            <div class="tulisan">
+                Kucing kamu diklasifikasikan ras   : 
+            </div>
+            <div class="raskucing">
+                {{prediction}}
+            </div>
+        </div>
+    </div>
+    <div class="penjelasan_ras">
+      <h1 class="Judul_Tentang_Kucing">Tentang Kucing Avyssinian</h1>
+      <img class="Gambar_Penjelasan_Tentang_Kucing" src="../static//Aset_Foto/Abyssinian_45.jpg" alt="" >
+      <p class="Penjelasan_Tentang_Kucing">
+        Abyssinian terlihat seperti singa gunung kecil dengan wajah ekspresif yang ditandai secara dramatis dan mantel hangat yang menghasilkan warna-warni berkilauan baik saat diam maupun bergerak. Mereka atletis, waspada dan sangat aktif. Meskipun mereka berotot, gerakan mereka lincah, anggun, dan sangat cepat.
+        Ciri-ciri kucing abyssinian adalah pola tabby(pola warna, biasanya garis-garis, kombinasi garis dan lingkaran, atau bahkan perpaduan bintik dan garis) khas mereka yang ditandai oleh mantel bulu yang halus dan kompleks. Dengan bulu pendek yang melekat pada kulit, kucing abyssinian memiliki warna lebih terang di seluruh tubuh mereka dan warna yang lebih gelap di sekitar ujung ekor mereka. Selain warna mereka yang unik, ciri-ciri kucing abyssinian disertai dengan telinga panjang mereka yang khas, wajah berbentuk segitiga dan mata almond. Tubuh mereka yang panjang dan ramping memberikan tampilan yang elegan dan anggun. Pola belang khas pada ciri-ciri kucing abyssinian diperkaya oleh rambut agouti, yang memberikan lapisan bulu dengan kedalaman warna dan kilau yang unik
+        (The International Cat Association (TICA)) 
+      </p>
+    </div>
+    </div>
+  </section>
+  {% endif %}
+
+  {% if(prediction == "Bengal") %}
+  <section class="hasil d-none d-lg-block">
+    <div class="container-xxl kotak_hasil">
+        <div class="kotak_kotak_hasil">
+        <div class="isi">
+            <img src="data:image/jpeg;base64,{{ img_data }}" height="400px" width="400px">
+        </div>
+        <div class="isi">
+            <div class="tulisan">
+                Kucing kamu diklasifikasikan ras   : 
+            </div>
+            <div class="raskucing">
+                {{prediction}}
+            </div>
+        </div>
+    </div>
+    <div class="penjelasan_ras">
+      <h1 class="Judul_Tentang_Kucing">Tentang Kucing Bengal</h1>
+      <img class="Gambar_Penjelasan_Tentang_Kucing" src="../static//Aset_Foto/Bengal_4.jpg" alt="" >
+      <p class="Penjelasan_Tentang_Kucing">
+        Bengal adalah kucing sedang hingga besar yang terkenal dengan mantelnya yang sangat berwarna dan sangat kontras dari bintik -bintik yang jelas atau marmer yang khas. Awalnya dikembangkan dari persilangan antara kucing domestik dan kucing macan tutul Asia, bengal adalah satu -satunya kucing domestik yang dapat memiliki mawar seperti tanda pada macan tutul, jaguar, dan ocelot. Kucing bengal domestik saat ini hanya datang dari pembiakan bengal ke bengal lain dan tidak memerlukan perawatan khusus. Sejak awal mereka pada tahun 1986, kecantikan bengal dan pesona memikat dengan cepat menjadikannya salah satu ras yang paling populer. Menggunakan wawasan ilmiah dan semangat kooperatif, peternak bengal terus mengembangkan kucing -kucing yang menakjubkan ini dengan seleksi yang cermat untuk temperamen, kesehatan, dan keindahan.
+        Fitur yang paling menonjol dari ras kucing bengal adalah bulu mereka yang berpola roset yang sangat mirip dengan macan tutul. Bulu kucing keturunan Bengal ini, biasanya pendek dan lembut serta memiliki warna dasar seperti kuning, karat, oranye, dan gading. Sedangkan, tutul pada bulu ras kucing bengal dapat menampilkan palet warna yang beragam, termasuk hitam, karat, coklat, cokelat, pasir, juga oranye. Salah satu dari ciri-ciri kucing bengal yang menarik adalah kilauan perak yang melapisi bulu kucing keturunan bengal yang  menambah pesona eksotis asal kucing bengal. Selain itu, kucing keturunan bengal ini dapat pula dicirikan oleh kepala mereka yang kecil, bulat, dan bermata besar yang tertanam dalam di struktur wajah mereka, yang dengan khas mencerminkan ciri-ciri kucing bengal(The International Cat Association (TICA))
+      </p>
+    </div>
+    </div>
+  </section>
+  {% endif %}
+
+  {% if(prediction == "Birman") %}
+  <section class="hasil d-none d-lg-block">
+    <div class="container-xxl kotak_hasil">
+        <div class="kotak_kotak_hasil">
+        <div class="isi">
+            <img src="data:image/jpeg;base64,{{ img_data }}" height="400px" width="400px">
+        </div>
+        <div class="isi">
+            <div class="tulisan">
+                Kucing kamu diklasifikasikan ras   : 
+            </div>
+            <div class="raskucing">
+                {{prediction}}
+            </div>
+        </div>
+    </div>
+    <div class="penjelasan_ras">
+      <h1 class="Judul_Tentang_Kucing">Tentang Kucing Birman</h1>
+      <img class="Gambar_Penjelasan_Tentang_Kucing" src="../static//Aset_Foto/Birman_123.jpg" alt="" >
+      <p class="Penjelasan_Tentang_Kucing">Kucing birman merupakan kucing yang memiliki buluyang lancip dan panjang serta mata biru safir yang mempesona. Bulu halusnya berwarna terang dan idealnya diberi rona emas. Mereka memiliki bulu putih di keempat kakinya dan bulu di bagian belakang kaki belakangnya kontras dengan warna utama. Kucing lembut ini memiliki tubuh kekar dan otot yang kuat.
+        Kucing ras birman dikenal karena sifat mereka yang ceria dan ramah. Birman memiliki kemampuan unik untuk membina hubungan yang kuat dan abadi dengan manusia favorit mereka. Kucing ras birman terkenal karena sifat mereka yang lembut dan bersahabat, sangat menyukai interaksi sosial dan memerlukan stimulasi mental yang cukup. Birman sangat mudah bergaul, baik dengan manusia maupun hewan peliharaan lainnya, dan sangat menikmati waktu bermain dengan permainan seperti lempar tangkap atau petak umpet(The International Cat Association (TICA)).
+      </p>
+    </div>
+    </div>
+  </section>
+  {% endif %}
+
+
+  {% if(prediction == "Bombay") %}
+  <section class="hasil d-none d-lg-block">
+    <div class="container-xxl kotak_hasil">
+        <div class="kotak_kotak_hasil">
+        <div class="isi">
+            <img src="data:image/jpeg;base64,{{ img_data }}" height="400px" width="400px">
+        </div>
+        <div class="isi">
+            <div class="tulisan">
+                Kucing kamu diklasifikasikan ras   : 
+            </div>
+            <div class="raskucing">
+                {{prediction}}
+            </div>
+        </div>
+    </div>
+    <div class="penjelasan_ras">
+      <h1 class="Judul_Tentang_Kucing">Tentang Kucing Bombay</h1>
+      <img class="Gambar_Penjelasan_Tentang_Kucing" src="../static//Aset_Foto/Bombay_45.jpg" alt="" >
+      <p class="Penjelasan_Tentang_Kucing">Bombay adalah kucing berotot ramping dengan mata tembaga besar dan bulu hitam pekat. Kombinasi ini menyerupai mini-panther yang ada dalam. Bombay adalah ras buatan manusia yang dikembangkan dari persilangan antara American Shorthair hitam dengan musang Burma. Kucing dalam kelompok ras kucing Asia sangat ramah dan penuh kasih sayang. Kucing bombay memiliki suara yang unik dan biasanya sangat vokal. Mereka bukan kucing biasa(The International Cat Association (TICA)).
+
+      </p>
+    </div>
+    </div>
+  </section>
+  {% endif %}
+
+  {% if(prediction == "British_Shorthair") %}
+  <section class="hasil d-none d-lg-block">
+    <div class="container-xxl kotak_hasil">
+        <div class="kotak_kotak_hasil">
+        <div class="isi">
+            <img src="data:image/jpeg;base64,{{ img_data }}" height="400px" width="400px">
+        </div>
+        <div class="isi">
+            <div class="tulisan">
+                Kucing kamu diklasifikasikan ras   : 
+            </div>
+            <div class="raskucing">
+                {{prediction}}
+            </div>
+        </div>
+    </div>
+    <div class="penjelasan_ras">
+      <h1 class="Judul_Tentang_Kucing">Tentang Kucing British Shorthair</h1>
+      <img class="Gambar_Penjelasan_Tentang_Kucing" src="../static//Aset_Foto/British_Shorthair_2.jpg" alt="" >
+      <p class="Penjelasan_Tentang_Kucing">British shorthair merupakan kucing berwajah tembem dengan pipi tupai dan senyum bahagia . kucing ini memiliki senyuman dan bulu mewah yang dipadukan dengan watak menawan yang menjadikannya hewan peliharaan keluarga yang hebat. Nenek moyangnya berasal dari kucing Roma dan merupakan salah satu ras kucing Inggris tertua. British shorthair adalah kucing yang bermartabat dan penuh kasih sayang.
+        Ciri-ciri kucing ini sangat mudah dibedakan, yaitu bentuk matanya bundar, bagian dagu berbentuk bulat, terdapat otot di bagian dada, memiliki hidung berbentuk sangat pesek, bentuk kepala dan pipinya bulat, lehernya memiliki lekukan yang lebar dan lurus hingga ke dagu, posturnya cukup pendek dan padat, kakinya panjang dan kukunya kuat(The International Cat Association (TICA)).
+      </p>
+    </div>
+    </div>
+  </section>
+  {% endif %}
+
+
+  {% if(prediction == "Egyptian_Mau") %}
+  <section class="hasil d-none d-lg-block">
+    <div class="container-xxl kotak_hasil">
+        <div class="kotak_kotak_hasil">
+        <div class="isi">
+            <img src="data:image/jpeg;base64,{{ img_data }}" height="400px" width="400px">
+        </div>
+        <div class="isi">
+            <div class="tulisan">
+                Kucing kamu diklasifikasikan ras   : 
+            </div>
+            <div class="raskucing">
+                {{prediction}}
+            </div>
+        </div>
+    </div>
+    <div class="penjelasan_ras">
+      <h1 class="Judul_Tentang_Kucing">Tentang Kucing Egyptian Mau</h1>
+      <img class="Gambar_Penjelasan_Tentang_Kucing" src="../static//Aset_Foto/Egyptian_Mau_8.jpg" alt="" >
+      <p class="Penjelasan_Tentang_Kucing">
+        Kucing Egyptian Mau adalah kucing berwarna-warni dengan tipe elegan, memiliki penampilan sangat waspada sehingga memberikan kucing yang paling tepat digambarkan sebagai sosok yang anggun. Ada lima ciri fisik unik dari ras ini yang harus terlihat sekilas, salah satunya adalah garis alis dan ciri khas mata yang memberikan tampilan alami khawatir pada ras ini. Warna mata kucing ini digambarkan sebagai hijau gooseberry. Ciri  lainnya adalah lipatan kulit yang memanjang dari ujung posterior tulang rusuk hingga kaki belakang, yang membuat kucing ini memiliki kemampuan melompat yang luar biasa. Atribut unik terakhir adalah sikap "jinjit" yang diberikan oleh kaki belakang yang lebih panjang secara proporsional dibandingkan kaki depan. Sikap ini memberikan tampilan anggun dan anggun pada kucing Egyptian Mau(The International Cat Association (TICA)).
+
+      </p>
+    </div>
+    </div>
+  </section>
+  {% endif %}
+
+
+  {% if(prediction == "Maine_Coon") %}
+  <section class="hasil d-none d-lg-block">
+    <div class="container-xxl kotak_hasil">
+        <div class="kotak_kotak_hasil">
+        <div class="isi">
+            <img src="data:image/jpeg;base64,{{ img_data }}" height="400px" width="400px">
+        </div>
+        <div class="isi">
+            <div class="tulisan">
+                Kucing kamu diklasifikasikan ras   : 
+            </div>
+            <div class="raskucing">
+                {{prediction}}
+            </div>
+        </div>
+    </div>
+    <div class="penjelasan_ras">
+      <h1 class="Judul_Tentang_Kucing">Tentang Kucing Maine Coon</h1>
+      <img class="Gambar_Penjelasan_Tentang_Kucing" src="../static//Aset_Foto/Maine_Coon_55.jpg" alt="" >
+      <p class="Penjelasan_Tentang_Kucing">
+        Kucing ini merupakan Kucing berbulu panjang asli Amerika yang tangguh dan tampan. Kucing ini memiliki daya tahan hidup yang baik di musim dingin yang tidak bersahabat di New England. Pemilik maine coon menyukai karakteristik kepribadian seperti badut, sifat penuh kasih sayang, kebiasaan dan trik lucu serta kemauan untuk membantu dalam aktivitas apa pun. Mereka adalah teman yang sangat baik dan aktif.
+        Jenis kucing ini memiliki ciri-ciri badan berotot dan kaki yang kuat. Moncongnya cenderung berbentuk kotak, telinganya lebar dan tinggi. Rambutnya panjang dan tebal, terdiri dari rambut bagian dalam, dilapisi rambut bagian luar yang mengkilat dan tahan air. Rambut di kepala, leher dan bahunya lebih pendek, namun jadi memanjang di area punggung, pinggir dan ekor. Rambut di perut dan bagian bawahnya penuh dan terkesan acak-acakan. Terdapat juga rambut di bagian leher, yang dimulai dari bawah telinga, dan lebih panjang di jantan dibanding di betina. Rambut di ekornya panjang dan lebat. Ujung telinganya berbentuk lancip(The International Cat Association (TICA)). 
+
+      </p>
+    </div>
+    </div>
+  </section>
+  {% endif %}
+
+
+  {% if(prediction == "Persian") %}
+  <section class="hasil d-none d-lg-block">
+    <div class="container-xxl kotak_hasil">
+        <div class="kotak_kotak_hasil">
+        <div class="isi">
+            <img src="data:image/jpeg;base64,{{ img_data }}" height="400px" width="400px">
+        </div>
+        <div class="isi">
+            <div class="tulisan">
+                Kucing kamu diklasifikasikan ras   : 
+            </div>
+            <div class="raskucing">
+                {{prediction}}
+            </div>
+        </div>
+    </div>
+    <div class="penjelasan_ras">
+      <h1 class="Judul_Tentang_Kucing">Tentang Kucing Persian</h1>
+      <img class="Gambar_Penjelasan_Tentang_Kucing" src="../static//Aset_Foto/Persian_3.jpg" alt="" >
+      <p class="Penjelasan_Tentang_Kucing">
+        Kucing persian adalah salah satu kucing dengan ras tertua yang membangkitkan gambaran sejarah Persia dan Turki yang jauh. Bulunya panjang, lebat, dan tergerai hdalam berbagai dengan mata tembaga bulat besar terbuka dan manis. Kucing ini memiliki tubuh pendek kokoh dan kaki pendek seperti batang pohon kecil untuk menopang tubuhnya yang besar. Kucing persian telah menjadi hewan peliharaan yang populer sejak awal kemunculan kucing di akhir tahun 1800-an dan popularitasnya tetap tinggi hingga saat ini. Kucing Persia sangat cerdas dan ini membantu merekadapat menyesuaikan diri dengan baik di rumah. Mereka berkomunikasi dengan mata ekspresif dan mengharapkan pemiliknya untuk memahami keinginan mereka(The International Cat Association (TICA)).
+      </p>
+    </div>
+    </div>
+  </section>
+  {% endif %}
+
+
+  {% if(prediction == "Ragdoll") %}
+  <section class="hasil d-none d-lg-block">
+    <div class="container-xxl kotak_hasil">
+        <div class="kotak_kotak_hasil">
+        <div class="isi">
+            <img src="data:image/jpeg;base64,{{ img_data }}" height="400px" width="400px">
+        </div>
+        <div class="isi">
+            <div class="tulisan">
+                Kucing kamu diklasifikasikan ras   : 
+            </div>
+            <div class="raskucing">
+                {{prediction}}
+            </div>
+        </div>
+    </div>
+    <div class="penjelasan_ras">
+      <h1 class="Judul_Tentang_Kucing">Tentang Kucing Ragdoll</h1>
+      <img class="Gambar_Penjelasan_Tentang_Kucing" src="../static//Aset_Foto/Ragdoll_5.jpg" alt="" >
+      <p class="Penjelasan_Tentang_Kucing">
+        Ragdoll adalah kucing besar yang penuh kasih sayang dan berbulu setengah panjang dengan mata biru yang menawan. Salah satu ras kucing terbesar, ragdoll rukun dengan anak-anak dan hewan peliharaan lainnya, termasuk anjing. Kucing kokoh ini tidak memiliki ciri-ciri ekstrem dan mudah beradaptasi dengan rumah baru.
+        Kucing ini memiliki ciri-ciri kepalanya yang lebar memiliki bagian atas yang rata dan lebar di antara telinga. Mereka memiliki mara biru tua yang besar. Tubuhnya panjang dan berotot dengan dada lebar, leher pendek dan kaki yang kokoh. Cakarnya bulat besar dan berumbai, sedangkan ekornya panjang dan lebat. Rambut kucing ragdoll halus dan padat, memiliki ukuran sedang hingga panjang(The International Cat Association (TICA)).
+
+      </p>
+    </div>
+    </div>
+  </section>
+  {% endif %}
+
+
+  {% if(prediction == "Russian_Blue") %}
+  <section class="hasil d-none d-lg-block">
+    <div class="container-xxl kotak_hasil">
+        <div class="kotak_kotak_hasil">
+        <div class="isi">
+            <img src="data:image/jpeg;base64,{{ img_data }}" height="400px" width="400px">
+        </div>
+        <div class="isi">
+            <div class="tulisan">
+                Kucing kamu diklasifikasikan ras   : 
+            </div>
+            <div class="raskucing">
+                {{prediction}}
+            </div>
+        </div>
+    </div>
+    <div class="penjelasan_ras">
+      <h1 class="Judul_Tentang_Kucing">Tentang Kucing Russian Blue</h1>
+      <img class="Gambar_Penjelasan_Tentang_Kucing" src="../static//Aset_Foto/Russian_Blue_54.jpg" alt="" >
+      <p class="Penjelasan_Tentang_Kucing">
+        Kucing russian blue yang aristokrat adalah permata dunia kucing. Bulu mereka yang pendek, padat, berujung perak, berkilau dan berkilau dalam cahaya saat mereka bergerak memberikan suasana elegan .Dengan mata hijau zamrud mereka yang bersinar, mereka dikabarkan menjadi hewan peliharaan Tsar Rusia dan Ratu Victoria. Wajah cantik mereka memiliki senyuman misterius saat mereka mengamati kekuasaan mereka dengan kepuasan. Mereka adalah kucing berukuran sedang dengan tulang halus dan telinga besar melebar. Keanggunan dan kecerdasan membuat kucing ini banyak disukai(The International Cat Association (TICA)).
+      </p>
+    </div>
+    </div>
+  </section>
+  {% endif %}
+
+
+  {% if(prediction == "Siamese") %}
+  <section class="hasil d-none d-lg-block">
+    <div class="container-xxl kotak_hasil">
+        <div class="kotak_kotak_hasil">
+        <div class="isi">
+            <img src="data:image/jpeg;base64,{{ img_data }}" height="400px" width="400px">
+        </div>
+        <div class="isi">
+            <div class="tulisan">
+                Kucing kamu diklasifikasikan ras   : 
+            </div>
+            <div class="raskucing">
+                {{prediction}}
+            </div>
+        </div>
+    </div>
+    <div class="penjelasan_ras">
+      <h1 class="Judul_Tentang_Kucing">Tentang Kucing Siamese</h1>
+      <img class="Gambar_Penjelasan_Tentang_Kucing" src="../static//Aset_Foto/Siamese_34.jpg" alt="" >
+      <p class="Penjelasan_Tentang_Kucing">
+        Kucing siamese adalah ras induk dari kelompok rs siam yang mencakup kucing bali serta kucing oriental shorthair dan longhair yang memiliki tipe tubuh yang sama, namun memiliki sifat  yang berbeda. Kucing siamese anggun, lincah, panjang, ramping, kuat, berotot, banyak bicara, dan sangat cerdas. Mereka sangat sosial dan berorientasi pada manusia. Mereka harus memiliki orang-orang di sekitar mereka untuk berkembang.
+        Kucing siamese merupakan ras berukuran sedang dengan tubuh yang panjang dan lentur, yang terlihat anggun dan elegan, namun tetap berotot. Tubuh mereka cukup seimbang dan atletik, dengan lengan yang ramping serta cakar yang kecil dan lonjong. Ketika ditatap lurus, kepala mereka menyerupai segitiga yang meruncing dalam garis lurus mengarah ke moncongnya yang halus. Telinganya besar dan matanya berbentuk sipit dan miring ke arah hidung. Ekornya panjang dan meruncing serta bebas dari kekusutan. Rambutnya pun pendek, halus dan tumbuh berdekatan serta memiliki warna tubuh utama pucat dengan titik-titik berwarna lebih gelap(The International Cat Association (TICA)).
+
+      </p>
+    </div>
+    </div>
+  </section>
+  {% endif %}
+
+
+  {% if(prediction == "Sphynx") %}
+  <section class="hasil d-none d-lg-block">
+    <div class="container-xxl kotak_hasil">
+        <div class="kotak_kotak_hasil">
+        <div class="isi">
+            <img src="data:image/jpeg;base64,{{ img_data }}" height="400px" width="400px">
+        </div>
+        <div class="isi">
+            <div class="tulisan">
+                Kucing kamu diklasifikasikan ras   : 
+            </div>
+            <div class="raskucing">
+                {{prediction}}
+            </div>
+        </div>
+    </div>
+    <div class="penjelasan_ras">
+      <h1 class="Judul_Tentang_Kucing">Tentang Kucing Sphynx</h1>
+      <img class="Gambar_Penjelasan_Tentang_Kucing" src="../static//Aset_Foto/Sphynx_166.jpg" alt="" >
+      <p class="Penjelasan_Tentang_Kucing">kucing sphynx adalah kucing yang dikenal tidak memiliki rambut. Namun, kucing-kucing itu tidak sepenuhnya tidak memiliki rambut, namun ditutupi dengan rambut halus yang sekilas sering disebut mirip kulit buah persik. Kucing ini tidak memiliki kumis atau bulu mata.. Matanya dalam dan berbentuk lemon. Tubuhnya bertulang halus tetapi berotot dan memiliki dada laras. Kakinya panjang dan ramping dan memiliki penampilan berkaki busur yang disebabkan oleh dada yang rata. Ekornya panjang dan meruncing dan sulit disentuh. Saat menyentuh mereka terasa hangat dan lembut untuk disentuh dan sekilas seperti menyentuh bahan "suede". Ciri khas pada kulitnya berkerut di bagian kepala, tubuh dan kaki. Namun, kencang di tempat lain. Semua pola dan warna kulit bisa dimiliki oleh mereka(The International Cat Association (TICA)).</p>
+    </div>
+    </div>
+  </section>
+  {% endif %}
+
+
+
+ {% if(prediction == "Abyssinian") %}
+  <section class="hasil d-lg-none ">
+    <div class="container-xxl kotak_hasil_hp">
+        <div class="kotak_kotak_hasil_hp">
+        <div class="isi_hp">
+            <img class="gambar-kucing-hp" src="data:image/jpeg;base64,{{ img_data }}" height="300px" width="300px">
+        </div>
+        <div class="isi_hp">
+            <div class="tulisan_hp">
+                Kucing kamu diklasifikasikan ras   : 
+            </div>
+            <div class="raskucing_hp">
+                {{prediction}}
+            </div>
+        </div>
+    </div>
+    <div class="penjelasan_ras_hp">
+      <h1 class="Judul_Tentang_Kucing_hp">Tentang Kucing Abyssinian</h1>
+      <img class="Gambar_Penjelasan_Tentang_Kucing_hp" src="../static//Aset_Foto/Abyssinian_45.jpg" alt="" >
+      <p class="Penjelasan_Tentang_Kucing_hp">
+        Abyssinian terlihat seperti singa gunung kecil dengan wajah ekspresif yang ditandai secara dramatis dan mantel hangat yang menghasilkan warna-warni berkilauan baik saat diam maupun bergerak. Mereka atletis, waspada dan sangat aktif. Meskipun mereka berotot, gerakan mereka lincah, anggun, dan sangat cepat.
+        Ciri-ciri kucing abyssinian adalah pola tabby(pola warna, biasanya garis-garis, kombinasi garis dan lingkaran, atau bahkan perpaduan bintik dan garis) khas mereka yang ditandai oleh mantel bulu yang halus dan kompleks. Dengan bulu pendek yang melekat pada kulit, kucing abyssinian memiliki warna lebih terang di seluruh tubuh mereka dan warna yang lebih gelap di sekitar ujung ekor mereka. Selain warna mereka yang unik, ciri-ciri kucing abyssinian disertai dengan telinga panjang mereka yang khas, wajah berbentuk segitiga dan mata almond. Tubuh mereka yang panjang dan ramping memberikan tampilan yang elegan dan anggun. Pola belang khas pada ciri-ciri kucing abyssinian diperkaya oleh rambut agouti, yang memberikan lapisan bulu dengan kedalaman warna dan kilau yang unik(The International Cat Association (TICA)). 
+      </p>
+    </div>
+    </div>
+  </section>
+  {% endif %}
+
+  
+  {% if(prediction == "Bengal") %}
+
+  <section class="hasil d-lg-none">
+    <div class="container-xxl kotak_hasil_hp">
+      <div class="kotak_kotak_hasil_hp">
+      <div class="isi_hp">
+          <img  class="gambar-kucing-hp" src="data:image/jpeg;base64,{{ img_data }}" height="300px" width="300px">
+      </div>
+      <div class="isi_hp">
+          <div class="tulisan_hp">
+              Kucing kamu diklasifikasikan ras   : 
+          </div>
+          <div class="raskucing_hp">
+              {{prediction}}
+          </div>
+      </div>
+  </div>
+  <div class="penjelasan_ras_hp">
+    <h1 class="Judul_Tentang_Kucing_hp">Tentang Kucing Bengal</h1>
+    <img class="Gambar_Penjelasan_Tentang_Kucing_hp" src="../static//Aset_Foto/Bengal_4.jpg" alt="" >
+    <p class="Penjelasan_Tentang_Kucing_hp">
+        Bengal adalah kucing sedang hingga besar yang terkenal dengan mantelnya yang sangat berwarna dan sangat kontras dari bintik -bintik yang jelas atau marmer yang khas. Awalnya dikembangkan dari persilangan antara kucing domestik dan kucing macan tutul Asia, bengal adalah satu -satunya kucing domestik yang dapat memiliki mawar seperti tanda pada macan tutul, jaguar, dan ocelot. Kucing bengal domestik saat ini hanya datang dari pembiakan bengal ke bengal lain dan tidak memerlukan perawatan khusus. Sejak awal mereka pada tahun 1986, kecantikan bengal dan pesona memikat dengan cepat menjadikannya salah satu ras yang paling populer. Menggunakan wawasan ilmiah dan semangat kooperatif, peternak bengal terus mengembangkan kucing -kucing yang menakjubkan ini dengan seleksi yang cermat untuk temperamen, kesehatan, dan keindahan.
+        Fitur yang paling menonjol dari ras kucing bengal adalah bulu mereka yang berpola roset yang sangat mirip dengan macan tutul. Bulu kucing keturunan Bengal ini, biasanya pendek dan lembut serta memiliki warna dasar seperti kuning, karat, oranye, dan gading. Sedangkan, tutul pada bulu ras kucing bengal dapat menampilkan palet warna yang beragam, termasuk hitam, karat, coklat, cokelat, pasir, juga oranye. Salah satu dari ciri-ciri kucing bengal yang menarik adalah kilauan perak yang melapisi bulu kucing keturunan bengal yang  menambah pesona eksotis asal kucing bengal. Selain itu, kucing keturunan bengal ini dapat pula dicirikan oleh kepala mereka yang kecil, bulat, dan bermata besar yang tertanam dalam di struktur wajah mereka, yang dengan khas mencerminkan ciri-ciri kucing bengal(The International Cat Association (TICA)).
+      </p>
+    </div>
+    </div>
+  </section>
+  {% endif %}
+
+  {% if(prediction == "Birman") %}
+  <section class="hasil d-lg-none">
+    <div class="container-xxl kotak_hasil_hp">
+      <div class="kotak_kotak_hasil_hp">
+      <div class="isi_hp">
+          <img  class="gambar-kucing-hp" src="data:image/jpeg;base64,{{ img_data }}" height="300px" width="300px">
+      </div>
+      <div class="isi_hp">
+          <div class="tulisan_hp">
+              Kucing kamu diklasifikasikan ras   : 
+          </div>
+          <div class="raskucing_hp">
+              {{prediction}}
+          </div>
+      </div>
+  </div>
+  <div class="penjelasan_ras_hp">
+    <h1 class="Judul_Tentang_Kucing_hp">Tentang Kucing Birman</h1>
+    <img class="Gambar_Penjelasan_Tentang_Kucing_hp" src="../static//Aset_Foto/Birman_123.jpg" alt="" >
+    <p class="Penjelasan_Tentang_Kucing_hp">
+    Kucing birman merupakan kucing yang memiliki buluyang lancip dan panjang serta mata biru safir yang mempesona. Bulu halusnya berwarna terang dan idealnya diberi rona emas. Mereka memiliki bulu putih di keempat kakinya dan bulu di bagian belakang kaki belakangnya kontras dengan warna utama. Kucing lembut ini memiliki tubuh kekar dan otot yang kuat.
+        Kucing ras birman dikenal karena sifat mereka yang ceria dan ramah. Birman memiliki kemampuan unik untuk membina hubungan yang kuat dan abadi dengan manusia favorit mereka. Kucing ras birman terkenal karena sifat mereka yang lembut dan bersahabat, sangat menyukai interaksi sosial dan memerlukan stimulasi mental yang cukup. Birman sangat mudah bergaul, baik dengan manusia maupun hewan peliharaan lainnya, dan sangat menikmati waktu bermain dengan permainan seperti lempar tangkap atau petak umpet(The International Cat Association (TICA)).
+      </p>
+    </div>
+    </div>
+  </section>
+  {% endif %}
+
+  {% if(prediction == "Bombay") %}
+  <section class="hasil d-lg-none">
+    <div class="container-xxl kotak_hasil_hp">
+      <div class="kotak_kotak_hasil_hp">
+      <div class="isi_hp">
+          <img  class="gambar-kucing-hp" src="data:image/jpeg;base64,{{ img_data }}" height="300px" width="300px">
+      </div>
+      <div class="isi_hp">
+          <div class="tulisan_hp">
+              Kucing kamu diklasifikasikan ras   : 
+          </div>
+          <div class="raskucing_hp">
+              {{prediction}}
+          </div>
+      </div>
+  </div>
+  <div class="penjelasan_ras_hp">
+    <h1 class="Judul_Tentang_Kucing_hp">Tentang Kucing Bombay</h1>
+    <img class="Gambar_Penjelasan_Tentang_Kucing_hp" src="../static//Aset_Foto/Bombay_45.jpg" alt="" >
+    <p class="Penjelasan_Tentang_Kucing_hp">
+    Bombay adalah kucing berotot ramping dengan mata tembaga besar dan bulu hitam pekat. Kombinasi ini menyerupai mini-panther yang ada dalam. Bombay adalah ras buatan manusia yang dikembangkan dari persilangan antara American Shorthair hitam dengan musang Burma. Kucing dalam kelompok ras kucing Asia sangat ramah dan penuh kasih sayang. Kucing bombay memiliki suara yang unik dan biasanya sangat vokal. Mereka bukan kucing biasa(The International Cat Association (TICA)).
+
+      </p>
+    </div>
+    </div>
+  </section>
+  {% endif %}
+
+  {% if(prediction == "British_Shorthair") %}
+  <section class="hasil d-lg-none">
+    <div class="container-xxl kotak_hasil_hp">
+      <div class="kotak_kotak_hasil_hp">
+      <div class="isi_hp">
+          <img  class="gambar-kucing-hp" src="data:image/jpeg;base64,{{ img_data }}" height="300px" width="300px">
+      </div>
+      <div class="isi_hp">
+          <div class="tulisan_hp">
+              Kucing kamu diklasifikasikan ras   : 
+          </div>
+          <div class="raskucing_hp">
+              {{prediction}}
+          </div>
+      </div>
+  </div>
+  <div class="penjelasan_ras_hp">
+    <h1 class="Judul_Tentang_Kucing_hp">Tentang Kucing British Shorthair</h1>
+    <img class="Gambar_Penjelasan_Tentang_Kucing_hp" src="../static//Aset_Foto/British_Shorthair_2.jpg" alt="" >
+    <p class="Penjelasan_Tentang_Kucing_hp">
+    British shorthair merupakan kucing berwajah tembem dengan pipi tupai dan senyum bahagia . kucing ini memiliki senyuman dan bulu mewah yang dipadukan dengan watak menawan yang menjadikannya hewan peliharaan keluarga yang hebat. Nenek moyangnya berasal dari kucing Roma dan merupakan salah satu ras kucing Inggris tertua. British shorthair adalah kucing yang bermartabat dan penuh kasih sayang.
+        Ciri-ciri kucing ini sangat mudah dibedakan, yaitu bentuk matanya bundar, bagian dagu berbentuk bulat, terdapat otot di bagian dada, memiliki hidung berbentuk sangat pesek, bentuk kepala dan pipinya bulat, lehernya memiliki lekukan yang lebar dan lurus hingga ke dagu, posturnya cukup pendek dan padat, kakinya panjang dan kukunya kuat(The International Cat Association (TICA)).
+      </p>
+    </div>
+    </div>
+  </section>
+  {% endif %}
+
+  {% if(prediction == "Egyptian_Mau") %}
+  <section class="hasil d-lg-none">
+    <div class="container-xxl kotak_hasil_hp">
+      <div class="kotak_kotak_hasil_hp">
+      <div class="isi_hp">
+          <img  class="gambar-kucing-hp" src="data:image/jpeg;base64,{{ img_data }}" height="300px" width="300px">
+      </div>
+      <div class="isi_hp">
+          <div class="tulisan_hp">
+              Kucing kamu diklasifikasikan ras   : 
+          </div>
+          <div class="raskucing_hp">
+              {{prediction}}
+          </div>
+      </div>
+  </div>
+  <div class="penjelasan_ras_hp">
+    <h1 class="Judul_Tentang_Kucing_hp">Tentang Kucing Egyptian Mau</h1>
+    <img class="Gambar_Penjelasan_Tentang_Kucing_hp" src="../static//Aset_Foto/Egyptian_Mau_8.jpg" alt="" >
+    <p class="Penjelasan_Tentang_Kucing_hp">
+        Kucing Egyptian Mau adalah kucing berwarna-warni dengan tipe elegan, memiliki penampilan sangat waspada sehingga memberikan kucing yang paling tepat digambarkan sebagai sosok yang anggun. Ada lima ciri fisik unik dari ras ini yang harus terlihat sekilas, salah satunya adalah garis alis dan ciri khas mata yang memberikan tampilan alami khawatir pada ras ini. Warna mata kucing ini digambarkan sebagai hijau gooseberry. Ciri  lainnya adalah lipatan kulit yang memanjang dari ujung posterior tulang rusuk hingga kaki belakang, yang membuat kucing ini memiliki kemampuan melompat yang luar biasa. Atribut unik terakhir adalah sikap "jinjit" yang diberikan oleh kaki belakang yang lebih panjang secara proporsional dibandingkan kaki depan. Sikap ini memberikan tampilan anggun dan anggun pada kucing Egyptian Mau(The International Cat Association (TICA)).
+
+      </p>
+    </div>
+    </div>
+  </section>
+  {% endif %}
+
+  {% if(prediction == "Maine_Coon") %}
+  <section class="hasil d-lg-none">
+    <div class="container-xxl kotak_hasil_hp">
+      <div class="kotak_kotak_hasil_hp">
+      <div class="isi_hp">
+          <img  class="gambar-kucing-hp" src="data:image/jpeg;base64,{{ img_data }}" height="300px" width="300px">
+      </div>
+      <div class="isi_hp">
+          <div class="tulisan_hp">
+              Kucing kamu diklasifikasikan ras   : 
+          </div>
+          <div class="raskucing_hp">
+              {{prediction}}
+          </div>
+      </div>
+  </div>
+  <div class="penjelasan_ras_hp">
+    <h1 class="Judul_Tentang_Kucing_hp">Tentang Kucing Maine Coon</h1>
+    <img class="Gambar_Penjelasan_Tentang_Kucing_hp" src="../static//Aset_Foto/Maine_Coon_55.jpg" alt="" >
+    <p class="Penjelasan_Tentang_Kucing_hp">
+        Kucing ini merupakan Kucing berbulu panjang asli Amerika yang tangguh dan tampan. Kucing ini memiliki daya tahan hidup yang baik di musim dingin yang tidak bersahabat di New England. Pemilik maine coon menyukai karakteristik kepribadian seperti badut, sifat penuh kasih sayang, kebiasaan dan trik lucu serta kemauan untuk membantu dalam aktivitas apa pun. Mereka adalah teman yang sangat baik dan aktif.
+        Jenis kucing ini memiliki ciri-ciri badan berotot dan kaki yang kuat. Moncongnya cenderung berbentuk kotak, telinganya lebar dan tinggi. Rambutnya panjang dan tebal, terdiri dari rambut bagian dalam, dilapisi rambut bagian luar yang mengkilat dan tahan air. Rambut di kepala, leher dan bahunya lebih pendek, namun jadi memanjang di area punggung, pinggir dan ekor. Rambut di perut dan bagian bawahnya penuh dan terkesan acak-acakan. Terdapat juga rambut di bagian leher, yang dimulai dari bawah telinga, dan lebih panjang di jantan dibanding di betina. Rambut di ekornya panjang dan lebat. Ujung telinganya berbentuk lancip. 
+        (The International Cat Association (TICA))
+      </p>
+    </div>
+    </div>
+  </section>
+  {% endif %}
+
+  {% if(prediction == "Persian") %}
+  <section class="hasil d-lg-none">
+    <div class="container-xxl kotak_hasil_hp">
+        <div class="kotak_kotak_hasil_hp">
+        <div class="isi_hp">
+            <img  class="gambar-kucing-hp" src="data:image/jpeg;base64,{{ img_data }}" height="300px" width="300px">
+        </div>
+        <div class="isi_hp">
+            <div class="tulisan_hp">
+                Kucing kamu diklasifikasikan ras   : 
+            </div>
+            <div class="raskucing_hp">
+                {{prediction}}
+            </div>
+        </div>
+    </div>
+    <div class="penjelasan_ras_hp">
+      <h1 class="Judul_Tentang_Kucing_hp">Tentang Kucing Persian</h1>
+      <img class="Gambar_Penjelasan_Tentang_Kucing_hp" src="../static//Aset_Foto/Persian_3.jpg" alt="" >
+      <p class="Penjelasan_Tentang_Kucing_hp">
+        Kucing persian adalah salah satu kucing dengan ras tertua yang membangkitkan gambaran sejarah Persia dan Turki yang jauh. Bulunya panjang, lebat, dan tergerai hdalam berbagai dengan mata tembaga bulat besar terbuka dan manis. Kucing ini memiliki tubuh pendek kokoh dan kaki pendek seperti batang pohon kecil untuk menopang tubuhnya yang besar. Kucing persian telah menjadi hewan peliharaan yang populer sejak awal kemunculan kucing di akhir tahun 1800-an dan popularitasnya tetap tinggi hingga saat ini. Kucing Persia sangat cerdas dan ini membantu merekadapat menyesuaikan diri dengan baik di rumah. Mereka berkomunikasi dengan mata ekspresif dan mengharapkan pemiliknya untuk memahami keinginan mereka.
+        (The International Cat Association (TICA))
+      </p>
+    </div>
+    </div>
+  </section>
+  {% endif %}
+
+  {% if(prediction == "Ragdoll") %}
+  <section class="hasil d-lg-none">
+    <div class="container-xxl kotak_hasil_hp">
+      <div class="kotak_kotak_hasil_hp">
+      <div class="isi_hp">
+          <img  class="gambar-kucing-hp" src="data:image/jpeg;base64,{{ img_data }}" height="300px" width="300px">
+      </div>
+      <div class="isi_hp">
+          <div class="tulisan_hp">
+              Kucing kamu diklasifikasikan ras   : 
+          </div>
+          <div class="raskucing_hp">
+              {{prediction}}
+          </div>
+      </div>
+  </div>
+  <div class="penjelasan_ras_hp">
+    <h1 class="Judul_Tentang_Kucing_hp">Tentang Kucing British Ragdoll</h1>
+    <img class="Gambar_Penjelasan_Tentang_Kucing_hp" src="../static//Aset_Foto/Ragdoll_5.jpg" alt="" >
+    <p class="Penjelasan_Tentang_Kucing_hp">
+        Ragdoll adalah kucing besar yang penuh kasih sayang dan berbulu setengah panjang dengan mata biru yang menawan. Salah satu ras kucing terbesar, ragdoll rukun dengan anak-anak dan hewan peliharaan lainnya, termasuk anjing. Kucing kokoh ini tidak memiliki ciri-ciri ekstrem dan mudah beradaptasi dengan rumah baru.
+        Kucing ini memiliki ciri-ciri kepalanya yang lebar memiliki bagian atas yang rata dan lebar di antara telinga. Mereka memiliki mara biru tua yang besar. Tubuhnya panjang dan berotot dengan dada lebar, leher pendek dan kaki yang kokoh. Cakarnya bulat besar dan berumbai, sedangkan ekornya panjang dan lebat. Rambut kucing ragdoll halus dan padat, memiliki ukuran sedang hingga panjang.
+        (The International Cat Association (TICA))
+      </p>
+    </div>
+    </div>
+  </section>
+  {% endif %}
+
+  {% if(prediction == "Russian_Blue") %}
+  <section class="hasil d-lg-none">
+    <div class="container-xxl kotak_hasil_hp">
+      <div class="kotak_kotak_hasil_hp">
+      <div class="isi_hp">
+          <img  class="gambar-kucing-hp" src="data:image/jpeg;base64,{{ img_data }}" height="300px" width="300px">
+      </div>
+      <div class="isi_hp">
+          <div class="tulisan_hp">
+              Kucing kamu diklasifikasikan ras   : 
+          </div>
+          <div class="raskucing_hp">
+              {{prediction}}
+          </div>
+      </div>
+  </div>
+  <div class="penjelasan_ras_hp">
+    <h1 class="Judul_Tentang_Kucing_hp">Tentang Kucing Russian Blue</h1>
+    <img class="Gambar_Penjelasan_Tentang_Kucing_hp" src="../static//Aset_Foto/Russian_Blue_54.jpg" alt="" >
+    <p class="Penjelasan_Tentang_Kucing_hp">
+        Kucing russian blue yang aristokrat adalah permata dunia kucing. Bulu mereka yang pendek, padat, berujung perak, berkilau dan berkilau dalam cahaya saat mereka bergerak memberikan suasana elegan .Dengan mata hijau zamrud mereka yang bersinar, mereka dikabarkan menjadi hewan peliharaan Tsar Rusia dan Ratu Victoria. Wajah cantik mereka memiliki senyuman misterius saat mereka mengamati kekuasaan mereka dengan kepuasan. Mereka adalah kucing berukuran sedang dengan tulang halus dan telinga besar melebar. Keanggunan dan kecerdasan membuat kucing ini banyak disukai.
+        (The International Cat Association (TICA))
+      </p>
+    </div>
+    </div>
+  </section>
+  {% endif %}
+
+  {% if(prediction == "Siamese") %}
+  <section class="hasil d-lg-none">
+    <div class="container-xxl kotak_hasil_hp">
+      <div class="kotak_kotak_hasil_hp">
+      <div class="isi_hp">
+          <img  class="gambar-kucing-hp" src="data:image/jpeg;base64,{{ img_data }}" height="300px" width="300px">
+      </div>
+      <div class="isi_hp">
+          <div class="tulisan_hp">
+              Kucing kamu diklasifikasikan ras   : 
+          </div>
+          <div class="raskucing_hp">
+              {{prediction}}
+          </div>
+      </div>
+  </div>
+  <div class="penjelasan_ras_hp">
+    <h1 class="Judul_Tentang_Kucing_hp">Tentang Kucing Siamese</h1>
+    <img class="Gambar_Penjelasan_Tentang_Kucing_hp" src="../static//Aset_Foto/Siamese_34.jpg" alt="" >
+    <p class="Penjelasan_Tentang_Kucing_hp">
+        Kucing siamese adalah ras induk dari kelompok rs siam yang mencakup kucing bali serta kucing oriental shorthair dan longhair yang memiliki tipe tubuh yang sama, namun memiliki sifat  yang berbeda. Kucing siamese anggun, lincah, panjang, ramping, kuat, berotot, banyak bicara, dan sangat cerdas. Mereka sangat sosial dan berorientasi pada manusia. Mereka harus memiliki orang-orang di sekitar mereka untuk berkembang.
+        Kucing siamese merupakan ras berukuran sedang dengan tubuh yang panjang dan lentur, yang terlihat anggun dan elegan, namun tetap berotot. Tubuh mereka cukup seimbang dan atletik, dengan lengan yang ramping serta cakar yang kecil dan lonjong. Ketika ditatap lurus, kepala mereka menyerupai segitiga yang meruncing dalam garis lurus mengarah ke moncongnya yang halus. Telinganya besar dan matanya berbentuk sipit dan miring ke arah hidung. Ekornya panjang dan meruncing serta bebas dari kekusutan. Rambutnya pun pendek, halus dan tumbuh berdekatan serta memiliki warna tubuh utama pucat dengan titik-titik berwarna lebih gelap.
+        (The International Cat Association (TICA))
+      </p>
+    </div>
+    </div>
+  </section>
+  {% endif %}
+
+  {% if(prediction == "Sphynx") %}
+  <section class="hasil d-lg-none">
+    <div class="container-xxl kotak_hasil_hp">
+      <div class="kotak_kotak_hasil_hp">
+      <div class="isi_hp">
+          <img  class="gambar-kucing-hp" src="data:image/jpeg;base64,{{ img_data }}" height="300px" width="300px">
+      </div>
+      <div class="isi_hp">
+          <div class="tulisan_hp">
+              Kucing kamu diklasifikasikan ras   : 
+          </div>
+          <div class="raskucing_hp">
+              {{prediction}}
+          </div>
+      </div>
+  </div>
+  <div class="penjelasan_ras_hp">
+    <h1 class="Judul_Tentang_Kucing_hp">Tentang Kucing Sphynx</h1>
+    <img class="Gambar_Penjelasan_Tentang_Kucing_hp" src="../static//Aset_Foto/Sphynx_166.jpg" alt="" >
+    <p class="Penjelasan_Tentang_Kucing_hp">
+    kucing sphynx adalah kucing yang dikenal tidak memiliki rambut. Namun, kucing-kucing itu tidak sepenuhnya tidak memiliki rambut, namun ditutupi dengan rambut halus yang sekilas sering disebut mirip kulit buah persik. Kucing ini tidak memiliki kumis atau bulu mata.. Matanya dalam dan berbentuk lemon. Tubuhnya bertulang halus tetapi berotot dan memiliki dada laras. Kakinya panjang dan ramping dan memiliki penampilan berkaki busur yang disebabkan oleh dada yang rata. Ekornya panjang dan meruncing dan sulit disentuh. Saat menyentuh mereka terasa hangat dan lembut untuk disentuh dan sekilas seperti menyentuh bahan "suede". Ciri khas pada kulitnya berkerut di bagian kepala, tubuh dan kaki. Namun, kencang di tempat lain. Semua pola dan warna kulit bisa dimiliki oleh mereka (The International Cat Association (TICA))</p>
+   
+  </div>
+    </div>
+  </section>
+  {% endif %}
+
+
+
+  
+
+
+ 
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script src="../static/index.js"></script>
+
+</body>
+</html>
+
+
