@@ -1,6 +1,6 @@
 <h1>🐱 Project_CNN_Klasifikasi_Kucing_Catsify-App</h1>
 
-Catsify-App adalah sebuah aplikasi berbasis CNN (Convolutional Neural Network) yang mampu mengklasifikasikan 11 ras kucing menggunakan model deep learning yang telah dilatih dengan MobileNetV3 Large dan dioptimalkan dengan Transfer Learning.
+Catsify-App adalah sebuah aplikasi berbasis WEB yang mengimplementasikan CNN (Convolutional Neural Network) yang mampu mengklasifikasikan 11 ras kucing menggunakan model deep learning yang telah dilatih dengan MobileNetV3 Large dan dioptimalkan dengan Transfer Learning.
 
 📌 Daftar Ras Kucing yang Dapat Dikenali
 
